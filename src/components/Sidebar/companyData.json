@@ -16,8 +16,8 @@
       ]
     },
     {
-      "name": "Skills",
-      "link": "/skills",
+      "name": "Documents",
+      "link": "/documents",
       "secondar_navigation": "false",
       "projects": [
         {
@@ -31,14 +31,14 @@
       ]
     },
     {
-      "name": "Experience",
+      "name": "Recent",
       "secondar_navigation": "false",
-      "link": "/experience"
+      "link": "/recent"
     },
     {
-      "name": "Education.",
+      "name": "Registration Process",
       "secondar_navigation": "false",
-      "link": "/education"  ,
+      "link": "/regProcess"  ,
       "projects": [
         {
           "name": "Website Redesign",
@@ -51,27 +51,32 @@
       ]
     },
     {
-      "name": "Projects.",
+"name": "Appointments",
+"link":"/appointments"
+    },
+    {
+      "name": "Registration Template",
       "secondar_navigation": "false",
-      "link": "/projects"  
+      "link": "/regTemplate"
     },
  
     {
-      "name": " Certifications",
-      "secondar_navigation": "false",
-      "link": "/certifications" 
-    },
-    
-    {
-      "name": "Achievements & Awards",
-      "secondar_navigation": "false",
-      "link": "/achievements"
-    },
-    {
-      "name": "Contact ME",
-      "secondar_navigation": "false",
-      "link": "/contact-me"  ,
+      "name": "Insurance",
+      "secondar_navigation": "true",
+      "link": "/insurance"  ,
       "projects": [
+        {
+          "name": "Car",
+          "link": "/car-insurance"
+        },
+        {
+          "name": "Bike",
+          "link": "/bike-insurance"
+        },
+        {
+          "name": "Health",
+          "link": "/health-insurance"
+        }
        
       ]
     }

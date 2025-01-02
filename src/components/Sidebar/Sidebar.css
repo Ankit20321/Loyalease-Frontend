@@ -83,3 +83,16 @@
 .sidebar::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+/* Secondary Items Styles */
+.second-sidebar ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.second-sidebar li {
+  display: inline;
+}

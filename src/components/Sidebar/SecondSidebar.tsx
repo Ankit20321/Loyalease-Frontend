@@ -22,6 +22,9 @@ const Second: React.FC<SecondProps> = ({ projects }) => {
             component={NavLink}
             to={project.link}
             sx={{
+              display: 'block',
+              textAlign: 'center',
+              width: '100%',
               color: location.pathname === project.link ? 'Blue' : 'black',
               fontWeight: location.pathname === project.link ? 'bold' : 'normal',
             }} >

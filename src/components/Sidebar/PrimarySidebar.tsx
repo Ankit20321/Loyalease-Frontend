@@ -6,7 +6,7 @@ import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import Second from './SecondSidebar';
 import Card from '@mui/material/Card';
-import { NavLink } from "react-router-dom"; // Import NavLink
+import { NavLink, useLocation } from "react-router-dom"; // Import NavLink and useLocation
 
 interface Project {
   name: string;
@@ -29,6 +29,7 @@ const Sidebar = () => {
   const [activeProject, setActiveProject] = useState<string | null>(null);
   const [data, setData] = useState<CompanyData | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
+  const location = useLocation();
 
   useEffect(() => {
     // Simulate fetching data
@@ -49,6 +50,10 @@ const Sidebar = () => {
 
   const handleProjectClick = (project: string) => {
     setActiveProject(project);
+  };
+
+  const isSecondaryItemActive = (projects: Project[] | undefined) => {
+    return projects?.some(project => location.pathname === project.link);
   };
 
   if (loading) {
@@ -85,7 +90,7 @@ const Sidebar = () => {
             ) : (
               <>
                 {/* If the company has secondary navigation enabled (true) */}
-                <ListItemButton selected={activeProject === company.name}>
+                <ListItemButton selected={activeProject === company.name || isSecondaryItemActive(company.projects)}>
                   <ListItem>
                     {company.name}
                     {company.secondar_navigation === "true" && (
