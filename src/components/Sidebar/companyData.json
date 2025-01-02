@@ -1,0 +1,79 @@
+{
+  "companies": [
+    {
+      "name": "Home",
+      "secondar_navigation": "false",
+       "link": "/",
+      "projects": [
+        {
+          "name": " Quotes Preparation",
+          "link": "/ai-development"
+        },
+        {
+          "name": "invoice Generation",
+          "link": "/mobile-app"
+        }
+      ]
+    },
+    {
+      "name": "Skills",
+      "link": "/skills",
+      "secondar_navigation": "false",
+      "projects": [
+        {
+          "name": "Website Redesign",
+          "link": "/website-redesign"
+        },
+        {
+          "name": "SEO Optimization",
+          "link": "/seo-optimization"
+        }
+      ]
+    },
+    {
+      "name": "Experience",
+      "secondar_navigation": "false",
+      "link": "/experience"
+    },
+    {
+      "name": "Education.",
+      "secondar_navigation": "false",
+      "link": "/education"  ,
+      "projects": [
+        {
+          "name": "Website Redesign",
+          "link": "/website-redesign"
+        },
+        {
+          "name": "SEO Optimization",
+          "link": "/seo-optimization"
+        }
+      ]
+    },
+    {
+      "name": "Projects.",
+      "secondar_navigation": "false",
+      "link": "/projects"  
+    },
+ 
+    {
+      "name": " Certifications",
+      "secondar_navigation": "false",
+      "link": "/certifications" 
+    },
+    
+    {
+      "name": "Achievements & Awards",
+      "secondar_navigation": "false",
+      "link": "/achievements"
+    },
+    {
+      "name": "Contact ME",
+      "secondar_navigation": "false",
+      "link": "/contact-me"  ,
+      "projects": [
+       
+      ]
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+/* Sidebar Styles */
+.sidebar {
+  width: 200px;
+  background-color: #f4f4f4;
+  top: 70px;
+  padding: 20px;
+  height: 100vh;  /* Adjust for header height */
+  overflow-y: auto;            /* Enable vertical scrolling */
+  left: 0;
+  position: fixed;
+  z-index: 1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.active-link {
+  color: red; /* Change this to your desired active link color */
+  font-weight: bold; /* Optional: make the active link bold */
+}
+/* Navigation Styles */
+.sidebarList {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebarItem {
+  cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
+  padding: 10px; /* Add padding for better click area */
+  margin: 5px 0; /* Add margin for spacing between items */
+  background-color: #f0f0f0; /* Background color for the item */
+  border-radius: 4px; /* Rounded corners */
+  transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.sidebarItem:hover {
+  background-color: #e0e0e0; /* Change background color on hover */
+}
+
+.sidebarItem a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Dropdown & Active Styles */
+.dropdown-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdown-item.active {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Material UI Styles */
+.Mui-selected {
+  background-color: white;
+  color: black;
+}
+
+.Mui-selected:hover {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.active {
+  color: red;
+  font-weight: bold;
+}
+
+.inactive {
+  color: black;
+}
+
+/* Custom Scrollbar Styles */
+.sidebar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

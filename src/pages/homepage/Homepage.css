@@ -1,0 +1,78 @@
+
+.homepage-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 84vh;
+    padding: 2rem;
+}
+
+.content {
+    max-width: 800px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #1a237e;
+    margin-bottom: 2rem;
+    position: relative;
+    top:20px;
+    left: auto;
+}
+
+.introduction {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    top:20px;
+    position: relative;
+}
+
+.intro-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    color: #424242;
+}
+
+.skills-section {
+    margin: 2rem 0;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.skill-tag {
+    background: #3f51b5;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.social-link {
+    text-decoration: none;
+    color: #424242;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background: #3f51b5;
+    color: white;
+}
