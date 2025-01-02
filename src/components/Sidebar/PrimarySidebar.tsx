@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Sidebar.css";
 import { ListItem, ListItemButton, Collapse } from "@mui/material";
-import companyData from "./companyData.json"; // Adjust the path as necessary
+import companyDataRaw from "./companyData.json"; // Adjust the path as necessary
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import Second from './SecondSidebar';
@@ -32,16 +32,17 @@ const Sidebar = () => {
   const location = useLocation();
 
   useEffect(() => {
-    // Simulate fetching data
-    try {
-      // Replace with actual API call if needed
+    // Simulate an API call
+    setTimeout(() => {
+      const companyData: CompanyData = {
+        companies: companyDataRaw.companies.map(company => ({
+          ...company,
+          secondar_navigation: company.secondar_navigation || ""
+        }))
+      };
       setData(companyData);
-    } catch (err) {
-      // Handle error silently
-      setData(null);
-    } finally {
       setLoading(false);
-    }
+    }, 0);
   }, []);
 
   const handleClick = (company: string) => {
@@ -82,7 +83,7 @@ const Sidebar = () => {
           >
             {company.secondar_navigation === "false" ? (
               /* If secondary navigation is false, the company name will act as a link */
-              <ListItemButton component={NavLink} to={company.link || "#"} activeClassName="active-link">
+              <ListItemButton component={NavLink} to={company.link || "#"}>
                 <ListItem>
                   {company.name}
                 </ListItem>

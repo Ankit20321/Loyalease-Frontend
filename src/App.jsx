@@ -3,7 +3,7 @@ import React from 'react';
 import Layout from './components/Layout/Layout';
 import Sidebar from './components/Sidebar/PrimarySidebar'; // Import Sidebar
 import Homepage from './pages/homepage/Homepage';
-
+import Car from './pages/Car/Car';
 
 const AppRoutes = () => {
   // const location = useLocation();
@@ -13,6 +13,7 @@ const AppRoutes = () => {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Homepage />} />
+        <Route path="car-insurance" element={<Car />} />
       </Route>
     </Routes>
   );
