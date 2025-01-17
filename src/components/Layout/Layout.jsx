@@ -1,14 +1,18 @@
-import React from 'react'
+import React from 'react';
+import { useLocation } from 'react-router-dom'; // Import useLocation
 import Header from "../header/Header";
-//import Sidebar from "../Sidebar/PrimarySidebar";
+import Sidebar from "../Sidebar/PrimarySidebar";
 import { Outlet } from 'react-router-dom';
 import './Layout.css';
 
 const Layout = () => {
+  const location = useLocation(); // Get the current location
+
   return (
     <>
     <Header />
-    {/* <Sidebar /> */}
+    {/* Conditionally render Sidebar based on the current route */}
+    {location.pathname !== '/' && location.pathname !== '/signup' && <Sidebar />}
     <div className='container'>
       <div className="custom-frame">
         <div className='frame-content'>
@@ -22,7 +26,6 @@ const Layout = () => {
   )
 }
 
-
 const styles = {
   main: {
     background: '#fff',
@@ -30,5 +33,4 @@ const styles = {
   },
 };
 
-
-export default Layout
+export default Layout;

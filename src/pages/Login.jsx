@@ -9,6 +9,8 @@ const Login = () => {
     const [password, setPassword] = useState('');
     const { login } = useContext(AuthContext); // Use AuthContext
 
+    console.log("Login component rendered"); // Log to confirm rendering
+
     const handleLogin = async (e) => {
         e.preventDefault();
         try {

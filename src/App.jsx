@@ -1,7 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ProtectedRoute from './components/ProtectedRoute'; // Import ProtectedRoute
 import React from 'react';
-import Layout from './components/Layout/Layout';
-import Sidebar from './components/Sidebar/PrimarySidebar'; // Import Sidebar
+import Header from './components/header/Header'; // Import Header component
+import Sidebar from './components/Sidebar/PrimarySidebar'; // Import Sidebar component
 import Login from './pages/Login'; // Import Login component
 import Signup from './pages/Signup'; // Import Signup component
 import Dashboard from './pages/Dashboard'; // Import Dashboard component
@@ -12,24 +13,32 @@ const AppRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Login />} /> {/* Redirect root to Login */}
+      <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} /> {/* Add Signup route */}
-      <Route path="/dashboard" element={<Dashboard />} /> {/* Add Dashboard route */}
-      <Route path="/car-insurance" element={<Car />} />
+      <Route path="/dashboard" element={
+        <>
+          <Header />
+          <Sidebar />
+          <Dashboard />
+        </>
+      } /> {/* Add Dashboard route with Header and Sidebar */}
+      <Route path="/car-insurance" element={
+        <>
+          <Header />
+          <Sidebar />
+          <Car />
+        </>
+      } /> {/* Add Car route with Header and Sidebar */}
     </Routes>
   );
 };
 
 const App = () => {
-  const isAuthRoute = window.location.pathname === '/' || window.location.pathname === '/signup';
-
   return (
     <AuthProvider>
       <Router>
         <div className="app-container">
-          {/* {!isAuthRoute && <Sidebar />} Conditionally render Sidebar */}
-          <div className="main-content">
-            <AppRoutes />
-          </div>
+          <AppRoutes />
         </div>
       </Router>
     </AuthProvider>

@@ -23,6 +23,7 @@ export const AuthProvider = ({ children }) => {
         localStorage.removeItem('token');
         localStorage.removeItem('role');
         setUser(null);
+        window.location.href = '/login'; // Redirect to login page immediately
     };
 
     return (
