@@ -1,20 +1,21 @@
-import React from "react";
-import "./Header.css";
-import Card from '@mui/material/Card';
-import Icon from '@mui/material/Icon';
-import "../Layout/Layout.css";
+import React, { useContext } from 'react';
+import { AuthContext } from '../../context/AuthContext'; // Import AuthContext
+import './Header.css'; // Import CSS for styling
 
 const Header = () => {
-  return (
-    <Card className="header">
-      <div className="title-group">
-        <h2 className="title">Loyalease</h2>
-        <p className="subtitle">Welcome to Loyalease</p>
-      </div>
-      <h2 className="home" style={{ paddingRight: '20px' }}>Home</h2>
-      <Icon className="user-icon">person</Icon>
-    </Card>
-  );
+    const { user, logout } = useContext(AuthContext); // Use AuthContext
+
+    return (
+        <header className="header">
+            <h1>Loyalease</h1>
+            {user && (
+                <div className="user-icon">
+                    <span>{user.role.charAt(0).toUpperCase() + user.role.slice(1)}</span> {/* Display user role */}
+                    <button onClick={logout}>Logout</button> {/* Logout button */}
+                </div>
+            )}
+        </header>
+    );
 };
 
 export default Header;

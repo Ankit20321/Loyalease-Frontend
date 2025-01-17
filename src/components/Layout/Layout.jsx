@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from "../header/Header";
-import Sidebar from "../Sidebar/PrimarySidebar";
+//import Sidebar from "../Sidebar/PrimarySidebar";
 import { Outlet } from 'react-router-dom';
 import './Layout.css';
 
@@ -8,7 +8,7 @@ const Layout = () => {
   return (
     <>
     <Header />
-    <Sidebar />
+    {/* <Sidebar /> */}
     <div className='container'>
       <div className="custom-frame">
         <div className='frame-content'>
